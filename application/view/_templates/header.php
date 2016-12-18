@@ -42,7 +42,14 @@
                 <div class="navbar-collapse collapse" id="searchbar">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo URL; ?>post" data-toggle="tooltip" data-placement="bottom" title="Manage Apartments"><span class="glyphicon glyphicon-home"></span> myPost</a></li> 
+                        <?php
+                            if( isset($_COOKIE["myPlace_user"])) {
+                            echo '<li><a href="<?php echo URL; ?>post" onclick="return false;" data-toggle="tooltip" data-placement="bottom" title="Manage Apartments"><span class="glyphicon glyphicon-home"></span> myPost</a></li>';
+                            } else {
+                            echo '<li><a href="<?php echo URL; ?>post" onclick="return false;" data-toggle="tooltip" data-placement="bottom" title="Manage Apartments"><span class="glyphicon glyphicon-home"></span> no user</a></li>'; 
+                            }
+                            ?>
+      
                         <li id="login_logout_button">
                             <?php
                                 if( isset($_COOKIE["myPlace_user"])) {
