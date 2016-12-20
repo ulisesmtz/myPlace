@@ -46,7 +46,7 @@
                             if( isset($_COOKIE["myPlace_user"])) {
                             echo '<li><a href="<?php echo URL; ?>post" onclick="return false;" data-toggle="tooltip" data-placement="bottom" title="Manage Apartments"><span class="glyphicon glyphicon-home"></span> myPost</a></li>';
                             } else {
-                            echo '<li><a href="" onclick="return false;" data-toggle="tooltip" data-placement="bottom" title="Manage Apartments"><span class="glyphicon glyphicon-home"></span> no user</a></li>'; 
+//                            echo '<li><a href="" onclick="return false;" data-toggle="tooltip" data-placement="bottom" title="Please log in"><span class="glyphicon glyphicon-home"></span> </a></li>'; 
                             }
                             ?>
       
